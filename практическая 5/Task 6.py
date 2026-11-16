@@ -11,9 +11,9 @@ def calculate_triangle_area(a, b, c):
     triangle_area = math.sqrt(p * (p - a) * (p - b) * (p - c))
     return triangle_area
 
-x1, y1 = map(float, input("Введите координаты точки A (x y): ").split())
-x2, y2 = map(float, input("Введите координаты точки B (x y): ").split())
-x3, y3 = map(float, input("Введите координаты точки C (x y): ").split())
+x1, y1 = map(float, input("Введите координаты точки A (x1 y1): ").split())
+x2, y2 = map(float, input("Введите координаты точки B (x2 y2): ").split())
+x3, y3 = map(float, input("Введите координаты точки C (x3 y3): ").split())
 
 ab = calculate_distance(x1, y1, x2, y2)
 bc = calculate_distance(x2, y2, x3, y3)
