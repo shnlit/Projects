@@ -4,9 +4,9 @@ JUICE_PRICE = 100
 WATER_PRICE = 50
 LEMONADE_PRICE = 90
 
-STUD_DISCOUNT = 0.8
+STUD_DISCOUNT = 0.2
 ADMIN_DISCOUNT = 0.5
-OLD_DISCOUNT = 0.7
+OLD_DISCOUNT = 0.3
 
 
 
@@ -57,17 +57,17 @@ match amount:
 
 match discount_code:
     case 'STUDENT':
-        end_total = total * STUD_DISCOUNT
+        end_total = total - total * STUD_DISCOUNT
         discount_sum = total - end_total
-        discount_text = f'Скидка "STUDENT" (20%): -{discount_sum:.0f} руб '
+        discount_text = f'Скидка "STUDENT" (20%): -{discount_sum:.0f} руб'
     case 'ADMIN':
-        end_total = total * ADMIN_DISCOUNT
+        end_total = total - total * ADMIN_DISCOUNT
         discount_sum = total - end_total
-        discount_text = f'Скидка "ADMIN" (50%): -{discount_sum:.0f} руб '
+        discount_text = f'Скидка "ADMIN" (50%): -{discount_sum:.0f} руб'
     case 'OLD':
-        end_total = total * OLD_DISCOUNT
+        end_total = total - total * OLD_DISCOUNT
         discount_sum = total - end_total
-        discount_text = f'Скидка "OLD" (30%): -{discount_sum:.0f} руб '
+        discount_text = f'Скидка "OLD" (30%): -{discount_sum:.0f} руб'
     case '':
         end_total = total
         discount_sum = ''
